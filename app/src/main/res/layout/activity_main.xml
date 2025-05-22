@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Pessoas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nome"
+                android:inputType="textPersonName"
+                android:background="@drawable/rounded_edittext" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etIdade"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="Idade"
+                android:inputType="number"
+                android:background="@drawable/rounded_edittext" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:textAllCaps="false"
+        app:cornerRadius="12dp"
+        android:layout_marginBottom="12dp"
+        app:icon="@drawable/ic_add_person"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfigurarCor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Configurar Cor de Fundo"
+        android:textAllCaps="false"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_palette"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pessoas Cadastradas:"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPessoas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_radio_green" />
+    <drawable name="ic_radio_yellow" />
+    <drawable name="ic_save" />
+    <drawable name="ic_radio_blue" />
+    <drawable name="ic_radio_white" />
+    <drawable name="rounded_edittext" />
+    <drawable name="ic_add_person" />
+    <drawable name="ic_palette" />
+    <drawable name="ic_delete" />
+</resources>

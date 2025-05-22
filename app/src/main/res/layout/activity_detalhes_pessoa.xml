@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detalhesLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light"
+    android:padding="24dp"
+    tools:context=".DetalhesPessoaActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detalhes da Pessoa"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome:"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/etNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idade:"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/etIdade"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Idade"
+                android:inputType="number"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Salvar Alterações"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_save"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExcluir"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Excluir Pessoa"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_delete"
+        app:iconTint="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp"
+        android:textColor="@color/colorPrimary"/>
+</LinearLayout>

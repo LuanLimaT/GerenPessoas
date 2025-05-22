@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/configLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ConfiguracoesActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Configurações de Cor"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgCores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbBranco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Branco"
+                    android:drawableLeft="@drawable/ic_radio_white" />
+
+                <RadioButton
+                    android:id="@+id/rbAzul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Azul Claro"
+                    android:drawableLeft="@drawable/ic_radio_blue" />
+
+                <RadioButton
+                    android:id="@+id/rbVerde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verde Claro"
+                    android:drawableLeft="@drawable/ic_radio_green" />
+
+                <RadioButton
+                    android:id="@+id/rbAmarelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amarelo Claro"
+                    android:drawableLeft="@drawable/ic_radio_yellow" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSalvarCor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Salvar Cor"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_save"
+                app:iconTint="@color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
